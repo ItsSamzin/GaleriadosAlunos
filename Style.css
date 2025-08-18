@@ -1,1 +1,95 @@
+:root { --gap: 4px; }
+* { box-sizing: border-box; transition: all 0.3s; }
+body { font-family: sans-serif; background: #f0f0f0; margin: 0; padding: 0; }
+h1 { text-align: center; margin: 1em; }
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--gap);
+  padding: var(--gap);
+}
+
+.item {
+  width: 150px;
+  position: relative;
+  text-align: center;
+}
+
+.item img {
+  width: 100%;
+  opacity: 0.7;
+  border: 2px solid #fff;
+  border-radius: 5px;
+}
+
+.item img:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.item figcaption {
+  margin-top: 0.5em;
+  font-size: 0.9em;
+}
+
+.modal {
+  display: none;
+}
+
+.modal:target {
+  display: flex;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.imagen {
+  position: relative;
+  max-width: 90%;
+}
+
+.imagen img {
+  width: 100%;
+  max-height: 90vh;
+  border: 5px solid #fff;
+  border-radius: 5px;
+}
+
+.imagen a[title="Fechar"] {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #fff;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ant, .sig {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: solid #fff;
+  width: 0;
+  height: 0;
+  cursor: pointer;
+}
+
+.ant { left: -30px; border-width: 20px 20px 20px 0; border-color: transparent #fff transparent transparent; }
+.sig { right: -30px; border-width: 20px 0 20px 20px; border-color: transparent transparent transparent #fff; }
 
