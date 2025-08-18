@@ -1,268 +1,153 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeria de Alunos</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <title>Galeria</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Galeria da Turma</h1>
-            <p>Clique nas fotos para ampliar</p>
-        </header>
-
-        <div class="gallery">
-            <!-- Expandindo de 6 para 24 alunos -->
-            <!-- Aluno 1 -->
-            <div class="student-card">
-                <img src="/Adriel_foto.jpeg?height=200&width=200" alt="Foto do Aluno 1" class="student-photo" onclick="openModal(this)">
-                <div class="student-info">
-                    <h3>Aluno 1</h3>
-                    <p class="student-number">Nº 01</p>
-                </div>
-            </div>
-
-            <!-- Aluno 2 -->
-            <div class="student-card">
-                <img src="/placeholder.svg?height=200&width=200" alt="Foto do Aluno 2" class="student-photo" onclick="openModal(this)">
-                <div class="student-info">
-                    <h3>Aluno 2</h3>
-                    <p class="student-number">Nº 02</p>
-                </div>
-            </div>
-
-            <!-- Aluno 3 -->
-            <div class="student-card">
-                <img src="/placeholder.svg?height=200&width=200" alt="Foto do Aluno 3" class="student-photo" onclick="openModal(this)">
-                <div class="student-info">
-                    <h3>Aluno 3</h3>
-                    <p class="student-number">Nº 03</p>
-                </div>
-            </div>
-
-            <!-- Aluno 4 -->
-            <div class="student-card">
-                <img src="/placeholder.svg?height=200&width=200" alt="Foto do Aluno 4" class="student-photo" onclick="openModal(this)">
-                <div class="student-info">
-                    <h3>Aluno 4</h3>
-                    <p class="student-number">Nº 04</p>
-                </div>
-            </div>
-
-            <!-- Aluno 5 -->
-            <div class="student-card">
-                <img src="/placeholder.svg?height=200&width=200" alt="Foto do Aluno 5" class="student-photo" onclick="openModal(this)">
-                <div class="student-info">
-                    <h3>Aluno 5</h3>
-                    <p class="student-number">Nº 05</p>
-                </div>
-            </div>
-
-            <!-- Aluno 6 -->
-            <div class="student-card">
-                <img src="/placeholder.svg?height=200&width=200" alt="Foto do Aluno 6" class="student-photo" onclick="openModal(this)">
-                <div class="student-info">
-                    <h3>Aluno 6</h3>
-                    <p class="student-number">Nº 06</p>
-                </div>
-            </div>
-
-            <!-- Aluno 7 -->
-            <div class="student-card">
-                <img src="/placeholder.svg?height=200&width=200" alt="Foto do Aluno 7" class="student-photo" onclick="openModal(this)">
-                <div class="student-info">
-                    <h3>Aluno 7</h3>
-                    <p class="student-number">Nº 07</p>
-                </div>
-            </div>
-
-            <!-- Aluno 8 -->
-            <div class="student-card">
-                <img src="/placeholder.svg?height=200&width=200" alt="Foto do Aluno 8" class="student-photo" onclick="openModal(this)">
-                <div class="student-info">
-                    <h3>Aluno 8</h3>
-                    <p class="student-number">Nº 08</p>
-                </div>
-            </div>
-
-            <!-- Aluno 9 -->
-            <div class="student-card">
-                <img src="/placeholder.svg?height=200&width=200" alt="Foto do Aluno 9" class="student-photo" onclick="openModal(this)">
-                <div class="student-info">
-                    <h3>Aluno 9</h3>
-                    <p class="student-number">Nº 09</p>
-                </div>
-            </div>
-
-            <!-- Aluno 10 -->
-            <div class="student-card">
-                <img src="/placeholder.svg?height=200&width=200" alt="Foto do Aluno 10" class="student-photo" onclick="openModal(this)">
-                <div class="student-info">
-                    <h3>Aluno 10</h3>
-                    <p class="student-number">Nº 10</p>
-                </div>
-            </div>
-
-            <!-- Aluno 11 -->
-            <div class="student-card">
-                <img src="/placeholder.svg?height=200&width=200" alt="Foto do Aluno 11" class="student-photo" onclick="openModal(this)">
-                <div class="student-info">
-                    <h3>Aluno 11</h3>
-                    <p class="student-number">Nº 11</p>
-                </div>
-            </div>
-
-            <!-- Aluno 12 -->
-            <div class="student-card">
-                <img src="/placeholder.svg?height=200&width=200" alt="Foto do Aluno 12" class="student-photo" onclick="openModal(this)">
-                <div class="student-info">
-                    <h3>Aluno 12</h3>
-                    <p class="student-number">Nº 12</p>
-                </div>
-            </div>
-
-            <!-- Aluno 13 -->
-            <div class="student-card">
-                <img src="/placeholder.svg?height=200&width=200" alt="Foto do Aluno 13" class="student-photo" onclick="openModal(this)">
-                <div class="student-info">
-                    <h3>Aluno 13</h3>
-                    <p class="student-number">Nº 13</p>
-                </div>
-            </div>
-
-            <!-- Aluno 14 -->
-            <div class="student-card">
-                <img src="/placeholder.svg?height=200&width=200" alt="Foto do Aluno 14" class="student-photo" onclick="openModal(this)">
-                <div class="student-info">
-                    <h3>Aluno 14</h3>
-                    <p class="student-number">Nº 14</p>
-                </div>
-            </div>
-
-            <!-- Aluno 15 -->
-            <div class="student-card">
-                <img src="/placeholder.svg?height=200&width=200" alt="Foto do Aluno 15" class="student-photo" onclick="openModal(this)">
-                <div class="student-info">
-                    <h3>Aluno 15</h3>
-                    <p class="student-number">Nº 15</p>
-                </div>
-            </div>
-
-            <!-- Aluno 16 -->
-            <div class="student-card">
-                <img src="/placeholder.svg?height=200&width=200" alt="Foto do Aluno 16" class="student-photo" onclick="openModal(this)">
-                <div class="student-info">
-                    <h3>Aluno 16</h3>
-                    <p class="student-number">Nº 16</p>
-                </div>
-            </div>
-
-            <!-- Aluno 17 -->
-            <div class="student-card">
-                <img src="/placeholder.svg?height=200&width=200" alt="Foto do Aluno 17" class="student-photo" onclick="openModal(this)">
-                <div class="student-info">
-                    <h3>Aluno 17</h3>
-                    <p class="student-number">Nº 17</p>
-                </div>
-            </div>
-
-            <!-- Aluno 18 -->
-            <div class="student-card">
-                <img src="/placeholder.svg?height=200&width=200" alt="Foto do Aluno 18" class="student-photo" onclick="openModal(this)">
-                <div class="student-info">
-                    <h3>Aluno 18</h3>
-                    <p class="student-number">Nº 18</p>
-                </div>
-            </div>
-
-            <!-- Aluno 19 -->
-            <div class="student-card">
-                <img src="/placeholder.svg?height=200&width=200" alt="Foto do Aluno 19" class="student-photo" onclick="openModal(this)">
-                <div class="student-info">
-                    <h3>Aluno 19</h3>
-                    <p class="student-number">Nº 19</p>
-                </div>
-            </div>
-
-            <!-- Aluno 20 -->
-            <div class="student-card">
-                <img src="/placeholder.svg?height=200&width=200" alt="Foto do Aluno 20" class="student-photo" onclick="openModal(this)">
-                <div class="student-info">
-                    <h3>Aluno 20</h3>
-                    <p class="student-number">Nº 20</p>
-                </div>
-            </div>
-
-            <!-- Aluno 21 -->
-            <div class="student-card">
-                <img src="/placeholder.svg?height=200&width=200" alt="Foto do Aluno 21" class="student-photo" onclick="openModal(this)">
-                <div class="student-info">
-                    <h3>Aluno 21</h3>
-                    <p class="student-number">Nº 21</p>
-                </div>
-            </div>
-
-            <!-- Aluno 22 -->
-            <div class="student-card">
-                <img src="/placeholder.svg?height=200&width=200" alt="Foto do Aluno 22" class="student-photo" onclick="openModal(this)">
-                <div class="student-info">
-                    <h3>Aluno 22</h3>
-                    <p class="student-number">Nº 22</p>
-                </div>
-            </div>
-
-            <!-- Aluno 23 -->
-            <div class="student-card">
-                <img src="/placeholder.svg?height=200&width=200" alt="Foto do Aluno 23" class="student-photo" onclick="openModal(this)">
-                <div class="student-info">
-                    <h3>Aluno 23</h3>
-                    <p class="student-number">Nº 23</p>
-                </div>
-            </div>
-
-            <!-- Aluno 24 -->
-            <div class="student-card">
-                <img src="/placeholder.svg?height=200&width=200" alt="Foto do Aluno 24" class="student-photo" onclick="openModal(this)">
-                <div class="student-info">
-                    <h3>Aluno 24</h3>
-                    <p class="student-number">Nº 24</p>
-                </div>
-            </div>
-        </div>
+  <h1 class="titulo">Galeria:</h1>
+  <div class="galeria" id="galeria">
+    <div class="foto" tabindex="0">
+      <img src="Adriel_foto.jpeg" alt="Aluno 1" />
+      <div class="nome">1 Adriel Vinicius da Luz Tomaz</div>
     </div>
-
-    <!-- Modal para ampliar imagem -->
-    <div id="imageModal" class="modal" onclick="closeModal()">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <img id="modalImage" src="/placeholder.svg" alt="">
-            <div id="modalCaption"></div>
-        </div>
+    <div class="foto" tabindex="0">
+      <img src="2.jpg" alt="Aluno 2" />
+      <div class="nome">2 Breno Ferreira de Brito</div>
     </div>
+    <div class="foto" tabindex="0">
+      <img src="3.jpg" alt="Aluno 3" />
+      <div class="nome">3 Carlos Emanuel da Silva</div>
+    </div>
+    <div class="foto" tabindex="0">
+      <img src="4.jpg" alt="Aluno 4" />
+      <div class="nome">4 Cleiton Douglas Araujo devSouza</div>
+    </div>
+    <div class="foto" tabindex="0">
+      <img src="5.jpg" alt="Aluno 5" />
+      <div class="nome">5 Derek Eduardo Delgado de Souza</div>
+    </div>
+    <div class="foto" tabindex="0">
+      <img src="6.jpg" alt="Aluno 6" />
+      <div class="nome">6 Felipe nader de Macedo Neves</div>
+    </div>
+    <div class="foto" tabindex="0">
+      <img src="7.jpg" alt="Aluno 7" />
+      <div class="nome">7 Gabriel merico Hort</div>
+    </div>
+    <div class="foto" tabindex="0">
+      <img src="8.jpg" alt="Aluno 8" />
+      <div class="nome">8 GUILHERME DOS REIS SOARES DOS SANTOS</div>
+    </div>
+    <div class="foto" tabindex="0">
+      <img src="9.jpg" alt="Aluno 9" />
+      <div class="nome">9 GUSTAVO MARTINS LYRA</div>
+    </div>
+    <div class="foto" tabindex="0">
+      <img src="10.jpg" alt="Aluno 10" />
+      <div class="nome">10 JACKSON JOSE ADÃO FELIX</div>
+    </div>
+    <div class="foto" tabindex="0">
+      <img src="11.jpg" alt="Aluno 11" />
+      <div class="nome">11 JANAINE NUNES DA SILVA</div>
+    </div>
+    <div class="foto" tabindex="0">
+      <img src="12.jpg" alt="Aluno 12" />
+      <div class="nome">12 JOAO GABRIEL CARMO DE BONFIM</div>
+    </div>
+    <div class="foto" tabindex="0">
+      <img src="13.jpg" alt="Aluno 13" />
+      <div class="nome">13 JOÃO GABRIEL JOSE MARTINS DE OLIVEIRA</div>
+    </div>
+    <div class="foto" tabindex="0">
+      <img src="14.jpg" alt="Aluno 14" />
+      <div class="nome">14 LEONARDO ANTONIO PRADO TRINDADE</div>
+    </div>
+    <div class="foto" tabindex="0">
+      <img src="15.jpg" alt="Aluno 15" />
+      <div class="nome">15 LUCAS CALCIOLARI CONSOLARO DOS SANTOS</div>
+    </div>
+    <div class="foto" tabindex="0">
+      <img src="16.jpg" alt="Aluno 16" />
+      <div class="nome">16 MARIA EDUARDA BORZUK DA FONSECA URBANSKI</div>
+    </div>
+    <div class="foto" tabindex="0">
+      <img src="17.jpg" alt="Aluno 17" />
+      <div class="nome">17 MARIA GABRIELA AQUINO PINHERO</div>
+    </div>
+    <div class="foto" tabindex="0">
+      <img src="18.jpg" alt="Aluno 18" />
+      <div class="nome">18 MATEUS HENRIQUE DE CARVALHO</div>
+    </div>
+    <div class="foto" tabindex="0">
+      <img src="19.jpg" alt="Aluno 19" />
+      <div class="nome">19 MATHEUS DOS SANTOS LOPES</div>
+    </div>
+    <div class="foto" tabindex="0">
+      <img src="20.jpg" alt="Aluno 20" />
+      <div class="nome">20 transferido</div>
+    </div>
+    <div class="foto" tabindex="0">
+      <img src="21.jpg" alt="Aluno 21" />
+      <div class="nome">21 RENAN STEFANI LIRA</div>
+    </div>
+    <div class="foto" tabindex="0">
+      <img src="22.jpg" alt="Aluno 22" />
+      <div class="nome">22 SABRINA DE OLIVEIRA ALVES</div>
+    </div>
+    <div class="foto" tabindex="0">
+      <img src="23.jpg" alt="Aluno 23" />
+      <div class="nome">23 SAMANTHA CHRISTAKIS GARCIA COLUCCI</div>
+    </div>
+    <div class="foto" tabindex="0">
+      <img src="24.jpg" alt="Aluno 24" />
+      <div class="nome">24 VICTOR GABRIEL DE SOUSA</div>
+    </div>
+    <div class="foto" tabindex="0">
+      <img src="25.jpg" alt="Aluno 25" />
+      <div class="nome">25 VITOR QUEIROZ DE BRITO NASCIMENTO</div>
+    </div>
+  </div>
 
-    <script>
-        function openModal(img) {
-            const modal = document.getElementById('imageModal');
-            const modalImg = document.getElementById('modalImage');
-            const caption = document.getElementById('modalCaption');
-            
-            modal.style.display = 'block';
-            modalImg.src = img.src;
-            caption.innerHTML = img.alt;
+  <!-- Modal para imagem ampliada -->
+  <div id="modal" class="modal">
+    <span id="modalClose" class="modal-close">&times;</span>
+    <img class="modal-content" id="modalImg" alt="Imagem ampliada" />
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const galeria = document.getElementById('galeria');
+      const modal = document.getElementById('modal');
+      const modalImg = document.getElementById('modalImg');
+      const modalCaption = document.getElementById('modalCaption');
+      const modalClose = document.getElementById('modalClose');
+
+      galeria.addEventListener('click', e => {
+        const foto = e.target.closest('.foto');
+        if (!foto) return;
+
+        const img = foto.querySelector('img');
+        const caption = foto.querySelector('.nome').textContent;
+
+        modal.style.display = 'flex';
+        modalImg.src = img.src;
+        modalImg.alt = img.alt;
+        modalCaption.textContent = caption;
+      });
+
+      modalClose.addEventListener('click', () => {
+        modal.style.display = 'none';
+      });
+
+      modal.addEventListener('click', e => {
+        if (e.target === modal) {
+          modal.style.display = 'none';
         }
-
-        function closeModal() {
-            document.getElementById('imageModal').style.display = 'none';
-        }
-
-        // Fechar modal com tecla ESC
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'Escape') {
-                closeModal();
-            }
-        });
-    </script>
+      });
+    });
+  </script>
 </body>
 </html>
