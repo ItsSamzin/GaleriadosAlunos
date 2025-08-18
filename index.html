@@ -130,24 +130,25 @@
       const modalClose = document.getElementById('modalClose');
 
       galeria.addEventListener('click', e => {
-        const foto = e.target.closest('figure.foto');
+        const foto = e.target.closest('.foto');
         if (!foto) return;
 
         const img = foto.querySelector('img');
+        const caption = foto.querySelector('.nome').textContent;
+
+        modal.style.display = 'flex';
         modalImg.src = img.src;
         modalImg.alt = img.alt;
-        modalCaption.textContent = foto.querySelector('figcaption').textContent;
-
-        modal.showModal();
+        modalCaption.textContent = caption;
       });
 
       modalClose.addEventListener('click', () => {
-        modal.close();
+        modal.style.display = 'none';
       });
 
       modal.addEventListener('click', e => {
         if (e.target === modal) {
-          modal.close();
+          modal.style.display = 'none';
         }
       });
     });
