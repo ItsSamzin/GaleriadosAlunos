@@ -28,7 +28,7 @@ body {
 /* Cada bloco de foto */
 .foto {
   background: #ffffff;
-  border-radius: 6px;
+  border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   padding: 12px;
@@ -44,13 +44,13 @@ body {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
-/* Estilo da imagem */
+/* Estilo da imagem com moldura redonda */
 .foto img {
   width: 100%;
   height: auto;
-  border-radius: 10px;
+  border-radius: 50%; /* Moldura redonda */
   object-fit: cover;
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 1 / 1; /* Imagem quadrada para o círculo funcionar */
   margin-bottom: 10px;
 }
 
@@ -110,3 +110,4 @@ body {
 .modal-close:hover {
   color: #bbb;
 }
+
