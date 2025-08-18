@@ -1,55 +1,112 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galeria da Turma – Lightbox CSS Puro</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Alunos</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Galeria da Turma – Ordem de Chamada</h1>
+    <div class="container">
+        <header>
+            <h1>Galeria da Turma</h1>
+            <p>Clique nas fotos para ampliar</p>
+        </header>
 
-  <div id="gallery" class="galeria">
-    <figure class="thumb"><a href="#img1"><img src="Adriel_foto.jpeg" alt="Adriel"></a><figcaption>Adriel</figcaption></figure>
-    <figure class="thumb"><a href="#img2"><img src="Breno_foto.jpeg" alt="Breno"></a><figcaption>Breno</figcaption></figure>
-    <figure class="thumb"><a href="#img3"><img src="Carlos_foto.jpeg" alt="Carlos"></a><figcaption>Carlos</figcaption></figure>
-    <figure class="thumb"><a href="#img4"><img src="Cleiton_foto.jpeg" alt="Cleiton"></a><figcaption>Cleiton</figcaption></figure>
-    <figure class="thumb"><a href="#img5"><img src="Derek_foto.jpeg" alt="Derek"></a><figcaption>Derek</figcaption></figure>
-    <figure class="thumb"><a href="#img6"><img src="Gabriel_foto.jpeg" alt="Gabriel"></a><figcaption>Gabriel</figcaption></figure>
-    <figure class="thumb"><a href="#img7"><img src="Gustavo_foto.jpeg" alt="Gustavo"></a><figcaption>Gustavo</figcaption></figure>
-    <figure class="thumb"><a href="#img8"><img src="Jackson_foto.jpeg" alt="Jackson"></a><figcaption>Jackson</figcaption></figure>
-    <figure class="thumb"><a href="#img9"><img src="JoãoJ_foto.jpeg" alt="JoãoJ"></a><figcaption>JoãoJ</figcaption></figure>
-    <figure class="thumb"><a href="#img10"><img src="Leonardo_foto.jpeg" alt="Leonardo"></a><figcaption>Leonardo</figcaption></figure>
-    <figure class="thumb"><a href="#img11"><img src="Lucas_foto.jpeg" alt="Lucas"></a><figcaption>Lucas</figcaption></figure>
-    <figure class="thumb"><a href="#img12"><img src="MariaB_foto.jpeg" alt="MariaB"></a><figcaption>MariaB</figcaption></figure>
-    <figure class="thumb"><a href="#img13"><img src="MateusL_foto.jpeg" alt="MateusL"></a><figcaption>MateusL</figcaption></figure>
-    <figure class="thumb"><a href="#img14"><img src="MatheusH_foto.jpeg" alt="MatheusH"></a><figcaption>MatheusH</figcaption></figure>
-    <figure class="thumb"><a href="#img15"><img src="Renan_foto.jpeg" alt="Renan"></a><figcaption>Renan</figcaption></figure>
-    <figure class="thumb"><a href="#img16"><img src="Sabrina_foto.jpeg" alt="Sabrina"></a><figcaption>Sabrina</figcaption></figure>
-    <figure class="thumb"><a href="#img17"><img src="Sam_foto.jpeg" alt="Sam"></a><figcaption>Sam</figcaption></figure>
-    <figure class="thumb"><a href="#img18"><img src="VictorG_foto.jpeg" alt="VictorG"></a><figcaption>VictorG</figcaption></figure>
-    <figure class="thumb"><a href="#img19"><img src="VitorQ_foto.jpeg" alt="VitorQ"></a><figcaption>VitorQ</figcaption></figure>
-  </div>
+        <div class="gallery">
+            <!-- Aluno 1 -->
+            <div class="student-card">
+                <img src="/placeholder.svg?height=200&width=200" alt="Foto do Aluno 1" class="student-photo" onclick="openModal(this)">
+                <div class="student-info">
+                    <h3>Ana Silva</h3>
+                    <p class="student-number">Nº 01</p>
+                </div>
+            </div>
 
-  <!-- Lightboxes iguais aos anteriores -->
-  <div id="img1" class="lightbox"><a href="#gallery" class="close"></a><img src="Adriel_foto.jpeg" alt="Adriel"></div>
-  <div id="img2" class="lightbox"><a href="#gallery" class="close"></a><img src="Breno_foto.jpeg" alt="Breno"></div>
-  <div id="img3" class="lightbox"><a href="#gallery" class="close"></a><img src="Carlos_foto.jpeg" alt="Carlos"></div>
-  <div id="img4" class="lightbox"><a href="#gallery" class="close"></a><img src="Cleiton_foto.jpeg" alt="Cleiton"></div>
-  <div id="img5" class="lightbox"><a href="#gallery" class="close"></a><img src="Derek_foto.jpeg" alt="Derek"></div>
-  <div id="img6" class="lightbox"><a href="#gallery" class="close"></a><img src="Gabriel_foto.jpeg" alt="Gabriel"></div>
-  <div id="img7" class="lightbox"><a href="#gallery" class="close"></a><img src="Gustavo_foto.jpeg" alt="Gustavo"></div>
-  <div id="img8" class="lightbox"><a href="#gallery" class="close"></a><img src="Jackson_foto.jpeg" alt="Jackson"></div>
-  <div id="img9" class="lightbox"><a href="#gallery" class="close"></a><img src="JoãoJ_foto.jpeg" alt="JoãoJ"></div>
-  <div id="img10" class="lightbox"><a href="#gallery" class="close"></a><img src="Leonardo_foto.jpeg" alt="Leonardo"></div>
-  <div id="img11" class="lightbox"><a href="#gallery" class="close"></a><img src="Lucas_foto.jpeg" alt="Lucas"></div>
-  <div id="img12" class="lightbox"><a href="#gallery" class="close"></a><img src="MariaB_foto.jpeg" alt="MariaB"></div>
-  <div id="img13" class="lightbox"><a href="#gallery" class="close"></a><img src="MateusL_foto.jpeg" alt="MateusL"></div>
-  <div id="img14" class="lightbox"><a href="#gallery" class="close"></a><img src="MatheusH_foto.jpeg" alt="MatheusH"></div>
-  <div id="img15" class="lightbox"><a href="#gallery" class="close"></a><img src="Renan_foto.jpeg" alt="Renan"></div>
-  <div id="img16" class="lightbox"><a href="#gallery" class="close"></a><img src="Sabrina_foto.jpeg" alt="Sabrina"></div>
-  <div id="img17" class="lightbox"><a href="#gallery" class="close"></a><img src="Sam_foto.jpeg" alt="Sam"></div>
-  <div id="img18" class="lightbox"><a href="#gallery" class="close"></a><img src="VictorG_foto.jpeg" alt="VictorG"></div>
-  <div id="img19" class="lightbox"><a href="#gallery" class="close"></a><img src="VitorQ_foto.jpeg" alt="VitorQ"></div>
+            <!-- Aluno 2 -->
+            <div class="student-card">
+                <img src="/placeholder.svg?height=200&width=200" alt="Foto do Aluno 2" class="student-photo" onclick="openModal(this)">
+                <div class="student-info">
+                    <h3>Bruno Santos</h3>
+                    <p class="student-number">Nº 02</p>
+                </div>
+            </div>
+
+            <!-- Aluno 3 -->
+            <div class="student-card">
+                <img src="/Adriel_foto.jpeg?height=200&width=200" alt="Foto do Aluno 3" class="student-photo" onclick="openModal(this)">
+                <div class="student-info">
+                    <h3>Carla Oliveira</h3>
+                    <p class="student-number">Nº 03</p>
+                </div>
+            </div>
+
+            <!-- Aluno 4 -->
+            <div class="student-card">
+                <img src="/placeholder.svg?height=200&width=200" alt="Foto do Aluno 4" class="student-photo" onclick="openModal(this)">
+                <div class="student-info">
+                    <h3>Diego Costa</h3>
+                    <p class="student-number">Nº 04</p>
+                </div>
+            </div>
+
+            <!-- Aluno 5 -->
+            <div class="student-card">
+                <img src="/placeholder.svg?height=200&width=200" alt="Foto do Aluno 5" class="student-photo" onclick="openModal(this)">
+                <div class="student-info">
+                    <h3>Elena Rodrigues</h3>
+                    <p class="student-number">Nº 05</p>
+                </div>
+            </div>
+
+            <!-- Aluno 6 -->
+            <div class="student-card">
+                <img src="/placeholder.svg?height=200&width=200" alt="Foto do Aluno 6" class="student-photo" onclick="openModal(this)">
+                <div class="student-info">
+                    <h3>Felipe Lima</h3>
+                    <p class="student-number">Nº 06</p>
+                </div>
+            </div>
+
+            <!-- Adicione mais alunos seguindo o mesmo padrão -->
+            <!-- Para adicionar mais alunos, copie a estrutura acima e altere:
+                 1. O src da imagem para o caminho da sua foto
+                 2. O nome do aluno
+                 3. O número de chamada
+            -->
+        </div>
+    </div>
+
+    <!-- Modal para ampliar imagem -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modalImage" src="/placeholder.svg" alt="">
+            <div id="modalCaption"></div>
+        </div>
+    </div>
+
+    <script>
+        function openModal(img) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            const caption = document.getElementById('modalCaption');
+            
+            modal.style.display = 'block';
+            modalImg.src = img.src;
+            caption.innerHTML = img.alt;
+        }
+
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
+
+        // Fechar modal com tecla ESC
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
 </body>
 </html>
