@@ -1,80 +1,220 @@
-/* Reset e base */
-body, html {
+* {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
-  background: #f0f0f0;
-  text-align: center;
-}
-
-h1 {
-  margin: 1em 0;
-}
-
-/* Galeria com Grid */
-.galeria {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-  gap: 8px;
-  padding: 1em;
-}
-
-/* Miniaturas */
-.thumb {
-  max-width: 120px;
-}
-
-.thumb img {
-  width: 100%;
-  height: auto;
-  border: 3px solid #fff;
-  border-radius: 4px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  transition: transform 0.3s, opacity 0.3s;
-}
-
-.thumb:hover img {
-  transform: scale(1.05);
-  opacity: 0.9;
-}
-
-.thumb figcaption {
-  margin-top: 0.3em;
-  font-size: 0.9em;
-}
-
-/* Lightbox original */
-.lightbox {
-  display: none;
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.8);
-  align-items: center;
-  justify-content: center;
-  padding: 1em;
   box-sizing: border-box;
 }
 
-.lightbox:target {
-  display: flex;
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #e3f2fd 0%, #c5cae9 100%);
+  min-height: 100vh;
+  padding: 2rem 1rem;
 }
 
-.lightbox img {
-  max-width: 90%;
-  max-height: 90vh;
-  border: 5px solid #fff;
-  border-radius: 4px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.lightbox .close {
-  position: absolute;
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  color: #1a237e;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.header p {
+  font-size: 1.1rem;
+  color: #424242;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.student-card {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.student-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.student-photo {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #3f51b5;
+  transition: border-color 0.3s ease;
+}
+
+.student-card:hover .student-photo {
+  border-color: #1a237e;
+}
+
+.student-photo img {
   width: 100%;
   height: 100%;
-  top: 0; left: 0;
-  cursor: pointer;
-  text-decoration: none;
+  object-fit: cover;
 }
 
+.student-card h3 {
+  font-size: 1.1rem;
+  color: #1a237e;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.student-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: #3f51b5;
+  color: white;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.modal-content {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  animation: modalFadeIn 0.3s ease;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #666;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close:hover {
+  color: #1a237e;
+}
+
+.modal-photo {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 1.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #3f51b5;
+}
+
+.modal-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal-content h2 {
+  font-size: 1.5rem;
+  color: #1a237e;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.modal-student-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: #3f51b5;
+  color: white;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .student-photo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .modal-photo {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .student-card {
+    padding: 1rem;
+  }
+
+  .student-photo {
+    width: 80px;
+    height: 80px;
+  }
+}
