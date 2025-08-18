@@ -2,66 +2,53 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Galeria da Turma – Lightbox CSS</title>
+  <title>Galeria da Turma – Lightbox CSS Puro</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main>
-    <h1>Galeria da Turma – Ordem de Chamada</h1>
-    <div class="galeria">
-      <!-- Substitua 'aluno1p.jpg' e 'aluno1g.jpg' pelos caminhos reais das imagens -->
-      <div class="item"><a href="#img1"><img src="Adriel_foto.jpeg" alt="Aluno 1"></a><figcaption>Aluno 1</figcaption></div>
-      <div class="item"><a href="#img2"><img src="Breno_foto.jpeg" alt="Aluno 2"></a><figcaption>Aluno 2</figcaption></div>
-      <div class="item"><a href="#img3"><img src="Carlos_foto.jpeg" alt="Aluno 3"></a><figcaption>Aluno 3</figcaption></div>
-      <div class="item"><a href="#img3"><img src="Cleiton_foto.jpeg" alt="Aluno 3"></a><figcaption>Aluno 3</figcaption></div>
-      <div class="item"><a href="#img3"><img src="Derek_foto.jpeg" alt="Aluno 3"></a><figcaption>Aluno 3</figcaption></div>
-      <div class="item"><a href="#img3"><img src="-" alt="Aluno 3"></a><figcaption>Aluno 3</figcaption></div>
-      <div class="item"><a href="#img3"><img src="Gabriel_foto.jpeg" alt="Aluno 3"></a><figcaption>Aluno 3</figcaption></div>
-      <div class="item"><a href="#img3"><img src="-" alt="Aluno 3"></a><figcaption>Aluno 3</figcaption></div>
-      <div class="item"><a href="#img3"><img src="Gustavo_foto.jpeg" alt="Aluno 3"></a><figcaption>Aluno 3</figcaption></div>
-      <div class="item"><a href="#img3"><img src="Jackson_foto.jpeg" alt="Aluno 3"></a><figcaption>Aluno 3</figcaption></div>
-      <div class="item"><a href="#img3"><img src="-" alt="Aluno 3"></a><figcaption>Aluno 3</figcaption></div>
-      <div class="item"><a href="#img3"><img src="-" alt="Aluno 3"></a><figcaption>Aluno 3</figcaption></div>
-      <div class="item"><a href="#img3"><img src="JoãoJ_foto.jpeg" alt="Aluno 3"></a><figcaption>Aluno 3</figcaption></div>
-      <div class="item"><a href="#img3"><img src="Leonardo_foto.jpeg" alt="Aluno 3"></a><figcaption>Aluno 3</figcaption></div>
-      <div class="item"><a href="#img3"><img src="Lucas_foto.jpeg" alt="Aluno 3"></a><figcaption>Aluno 3</figcaption></div>
-      <div class="item"><a href="#img3"><img src="MariaB_foto.jpeg" alt="Aluno 3"></a><figcaption>Aluno 3</figcaption></div>
-      <div class="item"><a href="#img3"><img src="-" alt="Aluno 3"></a><figcaption>Aluno 3</figcaption></div>
-      <div class="item"><a href="#img3"><img src="MateusL_foto.jpeg" alt="Aluno 3"></a><figcaption>Aluno 3</figcaption></div>
-      <div class="item"><a href="#img3"><img src="MatheusH_foto.jpeg" alt="Aluno 3"></a><figcaption>Aluno 3</figcaption></div>
-      <div class="item"><a href="#img3"><img src="Renan_foto.jpeg" alt="Aluno 3"></a><figcaption>Aluno 3</figcaption></div>
-      <div class="item"><a href="#img3"><img src="Sabrina_foto.jpeg" alt="Aluno 3"></a><figcaption>Aluno 3</figcaption></div>
-      <div class="item"><a href="#img3"><img src="Sam_foto.jpeg" alt="Aluno 3"></a><figcaption>Aluno 3</figcaption></div>
-      <div class="item"><a href="#img3"><img src="VictorG_foto.jpeg" alt="Aluno 3"></a><figcaption>Aluno 3</figcaption></div>
-      <div class="item"><a href="#img3"><img src="VitorQ_foto.jpeg" alt="Aluno 3"></a><figcaption>Aluno 3</figcaption></div>
-      <!-- Continue na ordem da chamada -->
-    </div>
+  <h1>Galeria da Turma – Ordem de Chamada</h1>
+  <div id="gallery" class="galeria">
+    <a href="#img1" class="thumb"><img src="Adriel_foto.jpeg" alt="Adriel"><figcaption>Adriel</figcaption></a>
+    <a href="#img2" class="thumb"><img src="Breno_foto.jpeg" alt="Breno"><figcaption>Breno</figcaption></a>
+    <a href="#img3" class="thumb"><img src="Carlos_foto.jpeg" alt="Carlos"><figcaption>Carlos</figcaption></a>
+    <a href="#img4" class="thumb"><img src="Cleiton_foto.jpeg" alt="Cleiton"><figcaption>Cleiton</figcaption></a>
+    <a href="#img5" class="thumb"><img src="Derek_foto.jpeg" alt="Derek"><figcaption>Derek</figcaption></a>
+    <a href="#img6" class="thumb"><img src="Gabriel_foto.jpeg" alt="Gabriel"><figcaption>Gabriel</figcaption></a>
+    <a href="#img7" class="thumb"><img src="Gustavo_foto.jpeg" alt="Gustavo"><figcaption>Gustavo</figcaption></a>
+    <a href="#img8" class="thumb"><img src="Jackson_foto.jpeg" alt="Jackson"><figcaption>Jackson</figcaption></a>
+    <a href="#img9" class="thumb"><img src="JoãoJ_foto.jpeg" alt="JoãoJ"><figcaption>JoãoJ</figcaption></a>
+    <a href="#img10" class="thumb"><img src="Leonardo_foto.jpeg" alt="Leonardo"><figcaption>Leonardo</figcaption></a>
+    <a href="#img11" class="thumb"><img src="Lucas_foto.jpeg" alt="Lucas"><figcaption>Lucas</figcaption></a>
+    <a href="#img12" class="thumb"><img src="MariaB_foto.jpeg" alt="MariaB"><figcaption>MariaB</figcaption></a>
+    <a href="#img13" class="thumb"><img src="MateusL_foto.jpeg" alt="MateusL"><figcaption>MateusL</figcaption></a>
+    <a href="#img14" class="thumb"><img src="MatheusH_foto.jpeg" alt="MatheusH"><figcaption>MatheusH</figcaption></a>
+    <a href="#img15" class="thumb"><img src="Renan_foto.jpeg" alt="Renan"><figcaption>Renan</figcaption></a>
+    <a href="#img16" class="thumb"><img src="Sabrina_foto.jpeg" alt="Sabrina"><figcaption>Sabrina</figcaption></a>
+    <a href="#img17" class="thumb"><img src="Sam_foto.jpeg" alt="Sam"><figcaption>Sam</figcaption></a>
+    <a href="#img18" class="thumb"><img src="VictorG_foto.jpeg" alt="VictorG"><figcaption>VictorG</figcaption></a>
+    <a href="#img19" class="thumb"><img src="VitorQ_foto.jpeg" alt="VitorQ"><figcaption>VitorQ</figcaption></a>
+  </div>
 
-    <div class="modal" id="img1">
-      <div class="imagen">
-        <a class="ant" href="#img3"></a>
-        <a href="#" title="Fechar"></a>
-        <img src="aluno1g.jpg" alt="Aluno 1">
-        <a class="sig" href="#img2"></a>
-      </div>
-    </div>
-    <div class="modal" id="img2">
-      <div class="imagen">
-        <a class="ant" href="#img1"></a>
-        <a href="#" title="Fechar"></a>
-        <img src="aluno2g.jpg" alt="Aluno 2">
-        <a class="sig" href="#img3"></a>
-      </div>
-    </div>
-    <div class="modal" id="img3">
-      <div class="imagen">
-        <a class="ant" href="#img2"></a>
-        <a href="#" title="Fechar"></a>
-        <img src="aluno3g.jpg" alt="Aluno 3">
-        <a class="sig" href="#img1"></a>
-      </div>
-    </div>
-  </main>
+  <!-- Lightboxes -->
+  <div id="img1" class="lightbox"><a href="#gallery" class="close"></a><img src="Adriel_foto.jpeg" alt="Adriel"></div>
+  <div id="img2" class="lightbox"><a href="#gallery" class="close"></a><img src="Breno_foto.jpeg" alt="Breno"></div>
+  <div id="img3" class="lightbox"><a href="#gallery" class="close"></a><img src="Carlos_foto.jpeg" alt="Carlos"></div>
+  <div id="img4" class="lightbox"><a href="#gallery" class="close"></a><img src="Cleiton_foto.jpeg" alt="Cleiton"></div>
+  <div id="img5" class="lightbox"><a href="#gallery" class="close"></a><img src="Derek_foto.jpeg" alt="Derek"></div>
+  <div id="img6" class="lightbox"><a href="#gallery" class="close"></a><img src="Gabriel_foto.jpeg" alt="Gabriel"></div>
+  <div id="img7" class="lightbox"><a href="#gallery" class="close"></a><img src="Gustavo_foto.jpeg" alt="Gustavo"></div>
+  <div id="img8" class="lightbox"><a href="#gallery" class="close"></a><img src="Jackson_foto.jpeg" alt="Jackson"></div>
+  <div id="img9" class="lightbox"><a href="#gallery" class="close"></a><img src="JoãoJ_foto.jpeg" alt="JoãoJ"></div>
+  <div id="img10" class="lightbox"><a href="#gallery" class="close"></a><img src="Leonardo_foto.jpeg" alt="Leonardo"></div>
+  <div id="img11" class="lightbox"><a href="#gallery" class="close"></a><img src="Lucas_foto.jpeg" alt="Lucas"></div>
+  <div id="img12" class="lightbox"><a href="#gallery" class="close"></a><img src="MariaB_foto.jpeg" alt="MariaB"></div>
+  <div id="img13" class="lightbox"><a href="#gallery" class="close"></a><img src="MateusL_foto.jpeg" alt="MateusL"></div>
+  <div id="img14" class="lightbox"><a href="#gallery" class="close"></a><img src="MatheusH_foto.jpeg" alt="MatheusH"></div>
+  <div id="img15" class="lightbox"><a href="#gallery" class="close"></a><img src="Renan_foto.jpeg" alt="Renan"></div>
+  <div id="img16" class="lightbox"><a href="#gallery" class="close"></a><img src="Sabrina_foto.jpeg" alt="Sabrina"></div>
+  <div id="img17" class="lightbox"><a href="#gallery" class="close"></a><img src="Sam_foto.jpeg" alt="Sam"></div>
+  <div id="img18" class="lightbox"><a href="#gallery" class="close"></a><img src="VictorG_foto.jpeg" alt="VictorG"></div>
+  <div id="img19" class="lightbox"><a href="#gallery" class="close"></a><img src="VitorQ_foto.jpeg" alt="VitorQ"></div>
 </body>
 </html>
 
