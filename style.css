@@ -1,97 +1,98 @@
 /* Corpo da página */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f0f2f5;
-  margin: 0;
-  padding: 40px 20px;
-  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Define a fonte da página */
+  background-color: #f0f2f5; /* Define a cor de fundo do corpo da página */
+  margin: 0; /* Remove a margem padrão */
+  padding: 40px 20px; /* Define um padding de 40px no topo e fundo e 20px nas laterais */
+  color: #333; /* Define a cor do texto como um cinza escuro */
 }
 
 /* Título da galeria */
 .titulo {
-  text-align: center;
-  margin-bottom: 40px;
-  font-weight: 700;
-  font-size: 2.5rem;
-  color: #504;
+  text-align: center; /* Centraliza o texto do título */
+  margin-bottom: 40px; /* Adiciona 40px de espaço abaixo do título */
+  font-weight: 700; /* Define o peso da fonte como negrito */
+  font-size: 2.5rem; /* Define o tamanho da fonte para 2.5 rem */
+  color: #504; /* Define a cor do texto do título como um tom de roxo acinzentado */
 }
 
 /* Container que organiza as fotos em grid */
 .galeria {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 20px;
+  max-width: 1200px; /* Define a largura máxima do container da galeria */
+  margin: 0 auto; /* Centraliza a galeria horizontalmente */
+  display: grid; /* Define a galeria como um grid */
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Define as colunas do grid com uma largura mínima de 180px e adapta automaticamente o número de colunas */
+  gap: 20px; /* Define o espaço entre as colunas e linhas do grid */
 }
 
 /* Cada bloco de foto */
 .foto {
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  padding: 12px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background: #ffffff;  /* Define o fundo das fotos como branco */
+  border-radius: 12px; /* Define bordas arredondadas para cada bloco de foto */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave ao redor de cada bloco */
+  cursor: pointer; /* Muda o cursor para uma mão ao passar sobre a foto, indicando que é clicável */
+  padding: 12px; /* Define um padding interno de 12px */ 
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adiciona transição suave ao movimento e sombra */
+  display: flex; /* Define o container como flexível */
+  flex-direction: column; /* Organiza os itens dentro da foto em uma coluna */
+  align-items: center; /* Centraliza os itens dentro do bloco */
 }
 
 /* Efeito ao passar o mouse por cima */
 .foto:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-}
+  transform: translateY(-5px); /* Move o bloco para cima ao passar o mouse, criando um efeito de elevação */ 
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15); /* Aumenta a sombra ao passar o mouse, destacando o bloco */
+} 
 
 /* Estilo da imagem com moldura redonda */
 .foto img {
-  width: 100%;
-  height: auto;
-  border-radius: 50%; /* Moldura redonda */
-  object-fit: cover;
-  aspect-ratio: 1 / 1; /* Imagem quadrada para o círculo funcionar */
-  margin-bottom: 10px;
+  width: 100%; /* Define a largura da imagem para 100% do bloco */
+  height: auto; /* Ajusta a altura da imagem automaticamente para manter a proporção */
+  border-radius: 50%; /* Aplica bordas arredondadas de 50%, tornando a imagem circular */
+  object-fit: cover; /* Faz a imagem cobrir totalmente o espaço da imagem sem distorção */
+  aspect-ratio: 1 / 1; /* Define a proporção da imagem para ser quadrada, importante para a imagem circular */
+  margin-bottom: 10px; /* Adiciona um espaço de 10px abaixo da imagem */
 }
 
 /* Estilo do nome do aluno */
 .nome {
-  font-weight: 600;
-  font-size: 1rem;
-  text-align: center;
-  color: #444;
+  font-weight: 600; /* Define o peso da fonte como semi-negrito */
+  font-size: 1rem; /* Define o tamanho da fonte como 1 rem */
+  text-align: center; /* Centraliza o texto */
+  color: #444; /* Define a cor do texto como um cinza escuro */
 }
 
 /* Modal: tela cheia com fundo escuro semi-transparente */
 .modal {
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  position: fixed; /* Define a posição do modal como fixa na tela */
+  z-index: 1000; /* Define o z-index para garantir que o modal fique acima de outros elementos */
+  left: 0; /* Posiciona o modal no lado esquerdo da tela */
+  top: 0; /* Posiciona o modal no topo da tela */
+  width: 100%; /* Define a largura do modal como 100% da largura da tela */
+  height: 100%;  /* Define a altura do modal como 100% da altura da tela */
+  background-color: rgba(0, 0, 0, 0.9); /* Aplica um fundo escuro semi-transparente */
+  display: none; /* Inicialmente o modal está escondido */
+  justify-content: center; /* Centraliza o conteúdo do modal horizontalmente */
+  align-items: center; /* Centraliza o conteúdo do modal verticalmente */
+  flex-direction: column; /* Organiza os elementos dentro do modal em coluna */
 }
 
 /* Imagem ampliada dentro do modal */
 .modal-content {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 10px;
-  box-shadow: 0 0 30px rgba(255, 255, 255, 0.7);
-  margin-bottom: 15px;
+  max-width: 90%; /* Define a largura máxima da imagem ampliada para 90% da largura da tela */
+  max-height: 90%; /* Define a altura máxima da imagem ampliada para 90% da altura da tela */
+  border-radius: 10px; /* Define bordas arredondadas para a imagem ampliada */
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.7); /* Adiciona uma sombra suave ao redor da imagem */
+  margin-bottom: 15px; /* Adiciona um espaço de 15px abaixo da imagem */
+}
 }
 
 /* Legenda da imagem */
 .modal-caption {
-  color: #ccc;
-  font-size: 1.2rem;
-  text-align: center;
-  max-width: 90%;
+  color: #ccc; /* Define a cor da legenda como cinza claro */
+  font-size: 1.2rem;  /* Define o tamanho da fonte da legenda */
+  text-align: center; /* Centraliza o texto da legenda */
+  max-width: 90%;  /* Limita a largura da legenda a 90% da largura da tela */
 }
 
 /* Botão fechar */
