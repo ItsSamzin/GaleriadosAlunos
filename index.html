@@ -1,19 +1,21 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <title>Galeria de Fotos 3 ano DS</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <h1 class="titulo">Galeria alunos 3º ano DS</h1>
-
+<!DOCTYPE html> <!-- O HTML define a estrutura da galeria de fotos, com várias divs, cada uma contendo uma imagem e o nome do aluno. -->
+<html lang="pt-BR"> <!-- Define o tipo de documento como HTML e o idioma como português do Brasil -->
+<head> <!-- Inicio da cabeça do codigo -->
+  <meta charset="UTF-8" /> <!-- Define o conjunto de caracteres para UTF-8 (suporta caracteres especiais) -->
+  <title>Galeria de Fotos 3 ano DS</title> <!-- Define o título da página que aparece na aba do navegador -->
+  <link rel="stylesheet" href="style.css" /> <!-- Inclui o arquivo CSS externo que define o estilo da página -->
+</head> <!-- Fechamento da cabeça do codigo -->
+  <body> <!-- Inicio do corpo do codigo -->
+  <h1 class="titulo">Galeria alunos 3º ano DS</h1> <!-- Cabeçalho principal da página -->
+  <!-- Div com a classe "galeria" que irá conter todas as fotos -->
   <div class="galeria" id="galeria">
+    <!-- Cada "foto" dentro da galeria tem uma classe "foto" e é navegável com tabindex="0" -->
     <div class="foto" tabindex="0">
-      <img src="Adriel_foto.jpeg" alt="Aluno 1" />
-      <div class="nome">Adriel Vinicius da Luz Tomaz Nº 1</div>
+      <img src="Adriel_foto.jpeg" alt="Aluno 1" /> <!-- Imagem do aluno -->
+      <div class="nome">Adriel Vinicius da Luz Tomaz Nº 1</div> <!-- Nome do aluno e numero -->
     </div>
-    <div class="foto" tabindex="0">
+    <!-- Repetição das divs com fotos e nomes de outros alunos -->
+    <div class="foto" tabindex="0"> 
       <img src="Breno_foto.jpeg" alt="Aluno 2" />
       <div class="nome">Breno Ferreira de Brito Nº 2</div>
     </div>
@@ -112,44 +114,49 @@
   </div>
 
   <!-- Modal para imagem ampliada -->
+    <!-- O modal é uma área oculta inicialmente (style="display: none;") que será exibida quando uma imagem for clicada. Uma janela ou caixa de diálogo que aparece sobre o conteúdo principal da página -->
   <div id="modal" class="modal">
-    <span id="modalClose" class="modal-close">&times;</span>
-    <img class="modal-content" id="modalImg" alt="Imagem ampliada" />
-    <div id="modalCaption" class="modal-caption"></div>
+    <span id="modalClose" class="modal-close">&times;</span> <!-- Botão de fechar do modal -->
+    <img class="modal-content" id="modalImg" alt="Imagem ampliada" /> <!-- Imagem que será ampliada -->
+    <div id="modalCaption" class="modal-caption"></div> <!-- Legenda da imagem ampliada -->
   </div>
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const galeria = document.getElementById('galeria');
-      const modal = document.getElementById('modal');
-      const modalImg = document.getElementById('modalImg');
-      const modalCaption = document.getElementById('modalCaption');
-      const modalClose = document.getElementById('modalClose');
+      // Aguarda o carregamento completo do conteúdo da página
+      const galeria = document.getElementById('galeria'); // Pega a div da galeria de fotos
+      const modal = document.getElementById('modal'); // Pega o modal que exibirá a imagem ampliada
+      const modalImg = document.getElementById('modalImg'); // Pega a imagem dentro do modal
+      const modalCaption = document.getElementById('modalCaption'); // Pega a legenda dentro do modal
+      const modalClose = document.getElementById('modalClose'); // Pega o botão de fechar do modal
 
       galeria.addEventListener('click', e => {
-        const foto = e.target.closest('.foto');
-        if (!foto) return;
+         // Adiciona um ouvinte de clique na galeria
+        const foto = e.target.closest('.foto'); // Verifica se o clique foi dentro de uma div com a classe 'foto'
+        if (!foto) return; // Se não foi dentro de uma foto, não faz nada
 
-        const img = foto.querySelector('img');
-        const caption = foto.querySelector('.nome').textContent;
+        const img = foto.querySelector('img'); // Pega a imagem dentro da div 'foto'
+        const caption = foto.querySelector('.nome').textContent;  // Pega o nome do aluno (legenda)
 
-        modal.style.display = 'flex';
-        modalImg.src = img.src;
-        modalImg.alt = img.alt;
-        modalCaption.textContent = caption;
+        modal.style.display = 'flex';  // Exibe o modal (a imagem ampliada)
+        modalImg.src = img.src; // Define o src da imagem no modal com a imagem clicada
+        modalImg.alt = img.alt; // Define o alt da imagem ampliada
+        modalCaption.textContent = caption;  // Exibe a legenda no modal
       });
 
       modalClose.addEventListener('click', () => {
-        modal.style.display = 'none';
+         // Adiciona um ouvinte de clique no botão de fechar do modal
+        modal.style.display = 'none'; // Fecha o modal
       });
 
-      modal.addEventListener('click', e => {
+      modal.addEventListener('click', e => {  
+        // Adiciona um ouvinte de clique no fundo do modal
         if (e.target === modal) {
-          modal.style.display = 'none';
+          modal.style.display = 'none'; // Fecha o modal se o fundo for clicado
         }
       });
     });
   </script>
-</body>
-</html>
+</body> <!-- Fecha o corpo do codigo -->
+</html> <!-- Final do html -->
 
